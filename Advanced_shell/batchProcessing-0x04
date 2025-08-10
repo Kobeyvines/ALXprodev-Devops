@@ -20,12 +20,22 @@ fetch_pokemon() {
     fi
 }
 
-# Start all fetches in background
+# Launch background processes
 for p in "${pokemons[@]}"; do
     fetch_pokemon "$p" &
 done
 
-# Wait for all background processes to complete
+# Show running jobs
+echo "Currently running background jobs:"
+jobs
+
+# Wait for all jobs to finish
 wait
+
+# If any jobs are still hanging, kill them (safety cleanup)
+if jobs %%; then
+    echo "Killing any remaining background jobs..."
+    jobs -p | xargs kill 2>/dev/null
+fi
 
 echo "All Pokémon fetched 🎉"
