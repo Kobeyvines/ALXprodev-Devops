@@ -1,0 +1,5 @@
+Failed to fetch bulbasaur after 3 attempts ❌
+Failed to fetch ivysaur after 3 attempts ❌
+Failed to fetch venusaur after 3 attempts ❌
+Failed to fetch charmander after 3 attempts ❌
+Failed to fetch charmeleon after 3 attempts ❌
